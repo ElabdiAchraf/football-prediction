@@ -1,0 +1,36 @@
+<div class="aaa">
+  <img src="./assets/Capture.PNG" width="1000px">
+<div class="main my-5">
+  <input type="checkbox" id="chk" aria-hidden="true">
+
+  <div class="signup p-2">
+    <label for="chk" aria-hidden="true">Predict Now</label>
+    <form [formGroup]="form"  (submit)="submit()">
+      
+    
+      <!-- <input formControlName="homeTeamName" type="text" name="txt" placeholder="Home Team" required="" class="form-control"> -->
+      <div class="forma">
+      <select formControlName="homeTeamName" type="text" name="txt" required=""
+        class="form-control m-5">
+        <option *ngFor="let team of Teams" [value]="team">
+          {{team}}
+        </option>
+      </select>
+      <label for="chk" aria-hidden="true">x</label>
+      <!--<input formControlName="awayTeamName" type="text" name="email" placeholder="Away Team" required="" class="form-control">-->
+      <select formControlName="awayTeamName" type="text" name="email" placeholder="Away Team" required=""
+        class="form-control m-5">
+        
+        <option *ngFor="let team of Teams" [value]="team">
+          {{team}}
+        </option>
+      </select>
+    </div>
+      <button type="submit">Predict</button>
+   
+    </form>
+
+  </div>
+</div>
+
+</div>
